@@ -1,0 +1,34 @@
+  {% load static %}
+   <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+
+            <li class="nav-item nav-profile">
+              <a href="#" class="nav-link">
+                <div class="nav-profile-image">
+                  <span class="login-status online"></span>
+                </div>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'hr_application:home_page' %}">
+                <span class="menu-title">Profile</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Employee</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-human-male-female menu-icon"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="{% url 'hr_application:attendance' %}">Attendance</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{% url 'hr_application:vacation' %}">Vacation</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{% url 'hr_application:salary' %}">Salary</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
